@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F79883B-1CF7-4365-861F-D256D561A823}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Director_of_Entry_AND_Exit</RootNamespace>
+    <AssemblyName>Simple Staff Management</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>29</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>418402B78A2360F95EBFBA1B84BFB38A8F9E853C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Director of Entry AND Exit_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Tasks5.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.5.5.2, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Downloads\Compressed\Bunifu_UI_WinForms_1.8.0.1_Downloadly.ir\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\Downloads\Compressed\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\Downloads\Compressed\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\..\Downloads\Compressed\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\Downloads\Compressed\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\Bunifu UI WinForms 1.5.5.2\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\..\Bunifu UI WinForms 1.5.5.2\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\..\Bunifu UI WinForms 1.5.5.2\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Bunifu UI WinForms 1.5.5.2\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business_Layer\Cls_Encryption.cs" />
+    <Compile Include="Business_Layer\Cls_Entry_AND_Exit.cs" />
+    <Compile Include="Business_Layer\Cls_login.cs" />
+    <Compile Include="License\Form_EnAndDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\Form_EnAndDe.Designer.cs">
+      <DependentUpon>Form_EnAndDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="License\Form_FGWID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\Form_FGWID.Designer.cs">
+      <DependentUpon>Form_FGWID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="License\Form_License.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\Form_License.Designer.cs">
+      <DependentUpon>Form_License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_add.Designer.cs">
+      <DependentUpon>Form_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_AddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_AddNewUser.Designer.cs">
+      <DependentUpon>Form_AddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_BackUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_BackUP.Designer.cs">
+      <DependentUpon>Form_BackUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_Con.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_Con.Designer.cs">
+      <DependentUpon>Form_Con.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_excuse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_excuse.Designer.cs">
+      <DependentUpon>Form_excuse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_login.Designer.cs">
+      <DependentUpon>Form_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Access_Layer\DAL.cs" />
+    <Compile Include="Presentation_Layer\Form_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_main.Designer.cs">
+      <DependentUpon>Form_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_Reception_Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_Reception_Message.Designer.cs">
+      <DependentUpon>Form_Reception_Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_Recovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_Recovery.Designer.cs">
+      <DependentUpon>Form_Recovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_User_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_User_list.Designer.cs">
+      <DependentUpon>Form_User_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_Working_time.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_Working_time.Designer.cs">
+      <DependentUpon>Form_Working_time.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_Working_time_Editcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Form_Working_time_Editcs.Designer.cs">
+      <DependentUpon>Form_Working_time_Editcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporting\DataSet_Re_User_Table.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Re_User_Table.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Form_Re_User_Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\Form_Re_User_Table.Designer.cs">
+      <DependentUpon>Form_Re_User_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\R_User_Table\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\R_User_Table\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\R_User_Table\Form_R_S_tabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\R_User_Table\Form_R_S_tabel.Designer.cs">
+      <DependentUpon>Form_R_S_tabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\User_Salary\DataSet_S.cs">
+      <DependentUpon>DataSet_S.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\User_Salary\DataSet_S.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_S.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\User_Salary\Form_S.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\User_Salary\Form_S.Designer.cs">
+      <DependentUpon>Form_S.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\User_Table_Re_Single\DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\User_Table_Re_Single\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\User_Table_Re_Single\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\Form_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Control\Form_Edit.Designer.cs">
+      <DependentUpon>Form_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_About.Designer.cs">
+      <DependentUpon>User_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_AddNewUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_AddNewUser.Designer.cs">
+      <DependentUpon>User_AddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_Con.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_Con.Designer.cs">
+      <DependentUpon>User_Con.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_login.Designer.cs">
+      <DependentUpon>User_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_Management.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_Management.Designer.cs">
+      <DependentUpon>User_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_Message.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_Message.Designer.cs">
+      <DependentUpon>User_Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_Salary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_Salary.Designer.cs">
+      <DependentUpon>User_Salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_Settings.Designer.cs">
+      <DependentUpon>User_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_Table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_Table.Designer.cs">
+      <DependentUpon>User_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_Taimer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_Taimer.Designer.cs">
+      <DependentUpon>User_Taimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_Taimer2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_Taimer2.Designer.cs">
+      <DependentUpon>User_Taimer2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_Top.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_Top.Designer.cs">
+      <DependentUpon>User_Top.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\User_Working_time.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\User_Working_time.Designer.cs">
+      <DependentUpon>User_Working_time.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="License\Form_EnAndDe.resx">
+      <DependentUpon>Form_EnAndDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License\Form_FGWID.resx">
+      <DependentUpon>Form_FGWID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License\Form_License.resx">
+      <DependentUpon>Form_License.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_add.resx">
+      <DependentUpon>Form_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_AddNewUser.resx">
+      <DependentUpon>Form_AddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_BackUP.resx">
+      <DependentUpon>Form_BackUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_Con.resx">
+      <DependentUpon>Form_Con.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_excuse.resx">
+      <DependentUpon>Form_excuse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_login.resx">
+      <DependentUpon>Form_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_main.resx">
+      <DependentUpon>Form_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_Reception_Message.resx">
+      <DependentUpon>Form_Reception_Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_Recovery.resx">
+      <DependentUpon>Form_Recovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_User_list.resx">
+      <DependentUpon>Form_User_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_Working_time.resx">
+      <DependentUpon>Form_Working_time.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Form_Working_time_Editcs.resx">
+      <DependentUpon>Form_Working_time_Editcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reporting\Form_Re_User_Table.resx">
+      <DependentUpon>Form_Re_User_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\Report_User_Table.rdlc" />
+    <EmbeddedResource Include="Reporting\R_User_Table\Form_R_S_tabel.resx">
+      <DependentUpon>Form_R_S_tabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\R_User_Table\Report1.rdlc" />
+    <EmbeddedResource Include="Reporting\User_Salary\Form_S.resx">
+      <DependentUpon>Form_S.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\User_Salary\Report_S.rdlc" />
+    <EmbeddedResource Include="Reporting\User_Table_Re_Single\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\User_Table_Re_Single\Report2.rdlc" />
+    <EmbeddedResource Include="User_Control\Form_Edit.resx">
+      <DependentUpon>Form_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_About.resx">
+      <DependentUpon>User_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_AddNewUser.resx">
+      <DependentUpon>User_AddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_Con.resx">
+      <DependentUpon>User_Con.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_login.resx">
+      <DependentUpon>User_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_Management.resx">
+      <DependentUpon>User_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_Message.resx">
+      <DependentUpon>User_Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_Salary.resx">
+      <DependentUpon>User_Salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_Settings.resx">
+      <DependentUpon>User_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_Table.resx">
+      <DependentUpon>User_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_Taimer.resx">
+      <DependentUpon>User_Taimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_Taimer2.resx">
+      <DependentUpon>User_Taimer2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_Top.resx">
+      <DependentUpon>User_Top.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\User_Working_time.resx">
+      <DependentUpon>User_Working_time.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Director of Entry AND Exit_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Reporting\DataSet_Re_User_Table.xsc">
+      <DependentUpon>DataSet_Re_User_Table.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\DataSet_Re_User_Table.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Re_User_Table.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\DataSet_Re_User_Table.xss">
+      <DependentUpon>DataSet_Re_User_Table.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\R_User_Table\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\R_User_Table\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\R_User_Table\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\User_Salary\DataSet_S.xsc">
+      <DependentUpon>DataSet_S.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\User_Salary\DataSet_S.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_S.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\User_Salary\DataSet_S.xss">
+      <DependentUpon>DataSet_S.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\User_Table_Re_Single\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\User_Table_Re_Single\DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\User_Table_Re_Single\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tasks3.ico" />
+    <Content Include="Tasks4.ico" />
+    <Content Include="Tasks5.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
